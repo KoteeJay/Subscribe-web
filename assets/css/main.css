@@ -1036,6 +1036,371 @@ nav .filter a {
     margin: 0 10px 0 0;
 }
 
+.data .modal .btn1 {
+    background-color: #7E1891;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 30px;
+}
+
+.data .modal .btn2 {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    border: solid 2px #999;
+    padding: 10px 30px;
+}
+
+.data .proceed {
+    background-color: #7E1891;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    width: 90%;
+    height: 40px;
+}
+
+
+/*--------------------------------------------------------------
+# Utility
+--------------------------------------------------------------*/
+
+.meter {
+    border: solid 1px #000;
+    border-radius: 15px;
+    height: 70px;
+    padding: 5px;
+}
+
+.meter select {
+    border: none;
+    height: 40px;
+}
+
+.meter select:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.utility .modal input {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: solid 1px #999;
+    padding-left: 10px;
+}
+
+.utility .modal img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.utility .modal ul {
+    padding: 0;
+}
+
+.utility .modal li {
+    margin: 10px 0;
+}
+
+.utility .modal-body a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 0;
+    /* background-color: #7E1891; */
+    border-radius: 8px;
+}
+
+.utility .proceed {
+    width: 90%;
+    background-color: #7E1891;
+    color: #fff;
+    border: none;
+    margin: auto;
+    height: 50px;
+    border-radius: 8px;
+}
+
+
+/*--------------------------------------------------------------
+# Utility
+--------------------------------------------------------------*/
+
+.verify-user {
+    background-color: #7E1891;
+    color: #fff;
+    border-radius: 15px;
+    padding: 0px 20px;
+}
+
+.verify-user p {
+    background-color: #fff;
+    color: #7E1891;
+    border-radius: 8px;
+    padding: 5px 20px;
+    margin-top: 15px;
+}
+
+.membership-type {
+    width: 100%;
+    border: solid 1px #000;
+    border-radius: 15px;
+    height: 70px;
+    padding: 5px;
+}
+
+.membership-type a {
+    background-color: #ebebeb;
+    color: #000;
+    text-decoration: none;
+    border-radius: 15px;
+    width: 47%;
+    margin: auto;
+    text-align: center;
+    height: 50px;
+}
+
+.membership-type a:hover {
+    background-color: #f6ccfe;
+    color: #000;
+}
+
+.modal .proceed {
+    width: 90%;
+    background-color: #7E1891;
+    color: #fff;
+    border: none;
+    margin: auto;
+    height: 50px;
+    border-radius: 8px;
+}
+
+
+/*--------------------------------------------------------------
+# Transaction
+--------------------------------------------------------------*/
+
+.transaction tbody img {
+    width: 30px;
+}
+
+.transaction tbody a {
+    text-decoration: none;
+    color: #7E1891;
+}
+
+
+/*--------------------------------------------------------------
+# Profile
+--------------------------------------------------------------*/
+
+.profile .box {
+    width: 100%;
+    border: solid 1px #000;
+    border-radius: 15px;
+    height: 70px;
+    padding: 5px;
+    margin: 15px auto;
+}
+
+.profile input {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 10px;
+    width: 100%;
+    height: 60px;
+}
+
+.profile input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.profile .proceed {
+    width: 100%;
+    background-color: #7E1891;
+    color: #fff;
+    border: none;
+    margin: auto;
+    border-radius: 15px;
+    height: 50px;
+}
+
+.profile .modal-body img {
+    width: 250px;
+}
+
+.profile .modal .btn1 {
+    background-color: #7E1891;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 30px;
+}
+
+.profile .modal .btn2 {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    border: solid 2px #999;
+    padding: 10px 30px;
+}
+
+.profile .modal input {
+    width: 80px;
+    height: 50px;
+    background-color: #7E1891;
+    color: #fff;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.profile .pin {
+    margin: 20px;
+}
+
+
+/*--------------------------------------------------------------
+# Authentication
+--------------------------------------------------------------*/
+
+.auth {
+    width: 70%;
+    /* height: 70vh; */
+    border-radius: 30px;
+    border: solid 1px #7E1891;
+    background-color: #7E1891;
+}
+
+.auth .left {
+    width: 70%;
+    height: 100%;
+    border-radius: 30px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgb(0, 0, 0, .5);
+}
+
+.auth .right {
+    width: 30%;
+    height: 100%;
+    border-radius: 0px 30px 30px 0px;
+    padding: 30px;
+}
+
+.auth a {
+    color: #000;
+    font-size: 13px;
+    text-align: end;
+}
+
+.auth input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.auth .box {
+    width: 100%;
+    height: 60px;
+    border-radius: 8px;
+    border: solid 0.5px #000;
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.auth input {
+    border: none;
+    width: 100%;
+    height: 45px;
+}
+
+.auth button {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    background-color: #7E1891;
+    color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.auth .line {
+    width: 50px;
+    height: 0.7px;
+    background-color: #999;
+}
+
+.auth p {
+    margin: 0 20px;
+}
+
+.auth .social .box {
+    border-radius: 8px;
+    border: #000 solid 1px;
+    width: 100px;
+    height: 50px;
+    margin: 0 10px;
+}
+
+.auth .social .box .google {
+    width: 60px;
+}
+
+.auth .social .box .facebook {
+    width: 30px;
+}
+
+.auth .social a .box:hover {
+    box-shadow: 0 0 10px rgb(0, 0, 0, .3);
+}
+
+.auth .right a {
+    width: 70px;
+    height: 40px;
+    text-decoration: none;
+}
+
+.auth .button {
+    width: 100%;
+}
+
+.auth .margin {
+    width: 50px;
+    height: 150px;
+}
+
+.auth .right .btna {
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 15px 40px;
+}
+
+.auth .right .btna:hover {
+    background-color: #bebdbd;
+}
+
+.auth .right .btnb {
+    background-color: #eb5b00;
+    color: #fff;
+    border-radius: 30px;
+    padding: 15px 45px;
+}
+
+.auth .right .btnb:hover {
+    background-color: #e78f58;
+}
+
 
 /* Mobile Navigation */
 
@@ -1573,5 +1938,8 @@ nav .filter a {
         width: 150px;
         margin: 10px auto;
         box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+    }
+    .table> :not(caption)>*>* {
+        padding: .2rem .2rem !important;
     }
 }

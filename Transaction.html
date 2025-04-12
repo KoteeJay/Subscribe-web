@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>SLTV</title>
+    <title>Transaction History</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
@@ -142,73 +142,76 @@
     </header>
     <main class="mt-5">
         <section>
-            <div class="container SLTV mt-3">
-                <div class="workflow  m-auto">
+            <div class="container transaction mt-3">
+                <div class=" m-auto">
                     <div class="d-flex justify-content-between top">
-                        <div class="text">
-                            <h3>SLTV Subscription</h3>
-                            <h5>Balance</h5>
-                            <h1>₦3,230.<span>84</span></h1>
-                        </div>
-                        <div class="mt-3 text">
-                            <a href="" class="button">Top up</a>
+                        <div class="text mt-3">
+                            <h3>Transaction</h3>
+
                         </div>
 
                     </div>
 
                 </div>
-                <div class="workflow m-auto mt-5">
-                    <div class="mb-3 contact d-flex justify-content-between align-items-center">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h5 class="card-title">Table with hoverable rows</h5>
 
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle d-flex align-items-center" aria-expanded="false">
-                                    <img src="assets/img/slt.png" class="me-2" alt="slt" >
-                                </button>
-                        </div>
+                        <!-- Table with hoverable rows -->
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Info</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Endpoint</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">More</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="assets/img/mtn.png" alt="mtn"></td>
+                                    <td>₦3,500></td>
+                                    <td>09068225050</td>
+                                    <td>Airtime</td>
+                                    <td><a href="" data-bs-toggle="modal" data-bs-target="#transactionModal">...</a></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/img/phed.png" alt="phed"></td>
+                                    <td>₦3,500</td>
+                                    <td>09068225050</td>
+                                    <td>Utility</td>
+                                    <td><a href="" data-bs-toggle="modal" data-bs-target="#transactionModal">...</a></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/img/glo.png" alt="glo"></td>
+                                    <td>₦3,500</td>
+                                    <td>09068225050</td>
+                                    <td>Airtime</td>
+                                    <td><a href="" data-bs-toggle="modal" data-bs-target="#transactionModal">...</a></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/img/airtel.png" alt="airtel"></td>
+                                    <td>₦3,500</td>
+                                    <td>09068225050</td>
+                                    <td>Airtime</td>
+                                    <td><a href="" data-bs-toggle="modal" data-bs-target="#transactionModal">...</a></td>
+                                </tr>
 
-                        <input type="tel" class="form-control" placeholder="Enter SLTV Number">
-
-
-
-                    </div>
-                    <div class="verify-user d-flex justify-content-between align-items-center">
-                        <h5> <i class="fa fa-star" aria-hidden="true"></i> Nerd Stack</h5>
-                        <p>Verified</p>
-                    </div>
-                    <div>
-                        <div class="mt-3 membership-type d-flex justify-content-between align-items-center">
-                            <a href="#" class="d-flex justify-content-center align-items-center">Basic</a>
-                            <a href="#" class="d-flex justify-content-center align-items-center">Gold</a>
-
-                        </div>
-                    </div>
-                    <div class="mt-3">
-                        <form>
-                            <div class="mb-3 form d-flex justify-content-between align-items-center">
-
-                                <input type="text" class="form-control" placeholder="Enter amount" id="amountInput" oninput="formatAmount(this)">
-                                <button type="button" class="" data-bs-toggle="modal" data-bs-target="#paymentModal">Pay</button>
-
-
-
-                            </div>
-
-
-
-                        </form>
-
-                        <!-- Payment Modal -->
-                        <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+                            </tbody>
+                        </table>
+                        <!-- Transaction Modal -->
+                        <div class="modal fade" id="transactionModal" tabindex="-1" aria-labelledby="transactionModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="paymentModalLabel">Confirm</h5>
+                                        <h5 class="modal-title" id="transactionModalLabel">History log</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="a">
-                                                <p>Cable Network</p>
+                                                <p>Service type</p>
                                             </div>
                                             <div class="b d-flex justify-content-between align-items-center">
                                                 <h6 class="mt-2">PHED</h6>
@@ -225,18 +228,18 @@
                                         </div>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="a">
-                                                <p>Package</p>
+                                                <p>Recipient</p>
                                             </div>
                                             <div class="b">
-                                                <h6 class="mt-2">Basic</h6>
+                                                <h6 class="mt-2">09068225050</h6>
                                             </div>
                                         </div>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="a">
-                                                <p>Cable Name</p>
+                                                <p>Reference</p>
                                             </div>
                                             <div class="b">
-                                                <h6 class="mt-2">Nerd Stack</h6>
+                                                <h6 class="mt-2">28323_bsdus2_342</h6>
                                             </div>
                                         </div>
                                         <div class="d-flex justify-content-between align-items-center">
@@ -255,37 +258,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <h5 class="mt-5">Quick Top Up</h5>
-                    <div class="quick d-flex justify-content-between align-items-center mt-3">
-
-
-                        <!-- Quick Top-Up Options -->
-                        <div class="quick d-flex justify-content-between align-items-center mt-3">
-                            <div class="box d-flex justify-content-center align-items-center">
-                                <p class="box d-flex justify-content-center align-items-center">
-                                    <a href="#" onclick="setAmount(1000)">₦1,000</a>
-                                </p>
-                            </div>
-                            <div class="box d-flex justify-content-center align-items-center">
-                                <p class="box d-flex justify-content-center align-items-center">
-                                    <a href="#" onclick="setAmount(2000)">₦2,000</a>
-                                </p>
-                            </div>
-                            <div class="box d-flex justify-content-center align-items-center">
-                                <p class="box d-flex justify-content-center align-items-center">
-                                    <a href="#" onclick="setAmount(5000)">₦5,000</a>
-                                </p>
-                            </div>
-                            <div class="box d-flex justify-content-center align-items-center">
-                                <p class="box d-flex justify-content-center align-items-center">
-                                    <a href="#" onclick="setAmount(10000)">₦10,000</a>
-                                </p>
-                            </div>
-                        </div>
 
                     </div>
                 </div>
+
 
             </div>
             </div>

@@ -88,6 +88,9 @@
 
   window.addEventListener("load", initSwiper);
 
+  /**
+   * Dropdown 
+   */
   function selectOption(imgSrc, className) {
       // Update the image in the dropdown button
       document.getElementById('selectedImage').src = imgSrc;
@@ -128,5 +131,14 @@
               // Let the input event handle the reformat after deletion
               return;
           }
+      });
+  }
+
+  function showSuccessAlert() {
+      Swal.fire({
+          icon: 'success',
+          title: 'Success!',
+          text: 'Your transaction was successful.',
+          confirmButtonText: 'OK'
       });
   }

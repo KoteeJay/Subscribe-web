@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>SLTV</title>
+    <title>Profile</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
@@ -142,149 +142,130 @@
     </header>
     <main class="mt-5">
         <section>
-            <div class="container SLTV mt-3">
-                <div class="workflow  m-auto">
-                    <div class="d-flex justify-content-between top">
-                        <div class="text">
-                            <h3>SLTV Subscription</h3>
-                            <h5>Balance</h5>
-                            <h1>₦3,230.<span>84</span></h1>
-                        </div>
-                        <div class="mt-3 text">
-                            <a href="" class="button">Top up</a>
-                        </div>
+            <div class="container profile mt-3">
+                <div class="col-lg-8 col-md-12 m-auto">
 
-                    </div>
+                    <div class="card">
+                        <div class="card-body pt-3">
+                            <!-- Bordered Tabs -->
+                            <ul class="nav nav-tabs nav-tabs-bordered">
 
-                </div>
-                <div class="workflow m-auto mt-5">
-                    <div class="mb-3 contact d-flex justify-content-between align-items-center">
+                                <li class="nav-item">
+                                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Profile</button>
+                                </li>
 
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle d-flex align-items-center" aria-expanded="false">
-                                    <img src="assets/img/slt.png" class="me-2" alt="slt" >
-                                </button>
-                        </div>
+                                <li class="nav-item">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Change  Password</button>
+                                </li>
 
-                        <input type="tel" class="form-control" placeholder="Enter SLTV Number">
+                                <li class="nav-item">
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings">Transaction Pin</button>
+                                </li>
 
 
+                            </ul>
+                            <div class="tab-content pt-2">
 
-                    </div>
-                    <div class="verify-user d-flex justify-content-between align-items-center">
-                        <h5> <i class="fa fa-star" aria-hidden="true"></i> Nerd Stack</h5>
-                        <p>Verified</p>
-                    </div>
-                    <div>
-                        <div class="mt-3 membership-type d-flex justify-content-between align-items-center">
-                            <a href="#" class="d-flex justify-content-center align-items-center">Basic</a>
-                            <a href="#" class="d-flex justify-content-center align-items-center">Gold</a>
+                                <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                                    <!-- Profile Edit Form -->
+                                    <form action="">
+                                        <div class="box">
+                                            <input type="text" placeholder="Full name">
+                                        </div>
+                                        <div class="box">
+                                            <input type="email" placeholder="Email">
+                                        </div>
+                                        <div class="box">
+                                            <input type="text" placeholder="Phone">
+                                        </div>
+                                        <button class="proceed mt-3">Update Profile</button>
+                                    </form>
+                                    <!-- Profile Edit Form -->
+                                </div>
 
-                        </div>
-                    </div>
-                    <div class="mt-3">
-                        <form>
-                            <div class="mb-3 form d-flex justify-content-between align-items-center">
+                                <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
-                                <input type="text" class="form-control" placeholder="Enter amount" id="amountInput" oninput="formatAmount(this)">
-                                <button type="button" class="" data-bs-toggle="modal" data-bs-target="#paymentModal">Pay</button>
+                                    <!-- Password Edit Form -->
+                                    <form action="">
+                                        <div class="box">
+                                            <input type="password" placeholder="Current password">
+                                        </div>
+                                        <div class="box">
+                                            <input type="password" placeholder="New Password">
+                                        </div>
+                                        <div class="box">
+                                            <input type="password" placeholder="Confirm New Password">
+                                        </div>
+                                        <button class="proceed mt-3" data-bs-toggle="modal" data-bs-target="#authModal">Update Password</button>
+                                    </form>
+                                    <!-- End Password Edit Form -->
 
+                                </div>
+
+                                <div class="tab-pane fade pt-3" id="profile-settings">
+                                    <!-- Pin Form -->
+                                    <form action="">
+                                        <div class="box">
+                                            <input type="password" placeholder="New Pin">
+                                        </div>
+
+                                        <div class="box">
+                                            <input type="password" placeholder="Confirm Pin">
+                                        </div>
+                                        <button class="proceed mt-3" data-bs-toggle="modal" data-bs-target="#confirmModal">Update Pin</button>
+                                    </form>
+                                    <!-- End Pin Form -->
+                                </div>
 
 
                             </div>
-
-
-
-                        </form>
-
-                        <!-- Payment Modal -->
-                        <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="paymentModalLabel">Confirm</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="a">
-                                                <p>Cable Network</p>
-                                            </div>
-                                            <div class="b d-flex justify-content-between align-items-center">
-                                                <h6 class="mt-2">PHED</h6>
-                                                <img src="assets/img/slt.png" alt="sltv">
-                                            </div>
+                            <!-- 2Factor Modal -->
+                            <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="authModalLabel">2Facotor Authenticator</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="a">
-                                                <p>Amount</p>
+                                        <div class="modal-body">
+                                            <div class="d-flex justify-content-center ">
+                                                <img src="assets/img/svg1.png" class="m-auto" alt="svg">
                                             </div>
-                                            <div class="b">
-                                                <h6 class="mt-2">₦3,500.00</h6>
-                                            </div>
+                                            <h5 class="text-center">Resetting your pin demands us verify your email from our database to authenticate you as the owner, wish to comply ?</h5>
                                         </div>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="a">
-                                                <p>Package</p>
-                                            </div>
-                                            <div class="b">
-                                                <h6 class="mt-2">Basic</h6>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="a">
-                                                <p>Cable Name</p>
-                                            </div>
-                                            <div class="b">
-                                                <h6 class="mt-2">Nerd Stack</h6>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="a">
-                                                <p>Date</p>
-                                            </div>
-                                            <div class="b">
-                                                <h6 class="mt-2">12 May 2025 : 10:34PM</h6>
-                                            </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn2" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn1" data-bs-toggle="modal" data-bs-target="#confirmModal">Proceed</button>
                                         </div>
                                     </div>
-                                    <div class="modal-footer">
+                                </div>
+                            </div>
+                            <!-- Confirm Modal -->
+                            <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="confirmModalLabel">Confirm</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="d-flex justify-content-center ">
+                                                <img src="assets/img/svg2.png" class="m-auto" alt="svg">
+                                            </div>
 
-                                        <button type="button" class="proceed" data-bs-toggle="modal" data-bs-target="#passowrdModal" data-bs-dismiss="modal">Proceed</button>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center pin">
+                                            <input maxlength="1" class="password text-center" id="otp1" type="text">
+                                            <input maxlength="1" class="password text-center" id="otp2" type="text">
+                                            <input maxlength="1" class="password text-center" id="otp3" type="text">
+                                            <input maxlength="1" class="password text-center" id="otp4" type="text">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <h5 class="mt-5">Quick Top Up</h5>
-                    <div class="quick d-flex justify-content-between align-items-center mt-3">
 
-
-                        <!-- Quick Top-Up Options -->
-                        <div class="quick d-flex justify-content-between align-items-center mt-3">
-                            <div class="box d-flex justify-content-center align-items-center">
-                                <p class="box d-flex justify-content-center align-items-center">
-                                    <a href="#" onclick="setAmount(1000)">₦1,000</a>
-                                </p>
-                            </div>
-                            <div class="box d-flex justify-content-center align-items-center">
-                                <p class="box d-flex justify-content-center align-items-center">
-                                    <a href="#" onclick="setAmount(2000)">₦2,000</a>
-                                </p>
-                            </div>
-                            <div class="box d-flex justify-content-center align-items-center">
-                                <p class="box d-flex justify-content-center align-items-center">
-                                    <a href="#" onclick="setAmount(5000)">₦5,000</a>
-                                </p>
-                            </div>
-                            <div class="box d-flex justify-content-center align-items-center">
-                                <p class="box d-flex justify-content-center align-items-center">
-                                    <a href="#" onclick="setAmount(10000)">₦10,000</a>
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
 
             </div>
@@ -314,7 +295,6 @@
         </div>
     </footer>
 
-    </div>
     <script>
         // OTP Functionality
         const passwords = document.querySelectorAll('.password');
@@ -351,6 +331,7 @@
             });
         });
     </script>
+
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     <script src="assets/js/main.js"></script>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Airtime</title>
+    <title>Utility</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
@@ -40,19 +40,98 @@
                     </a>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="icon d-flex justify-content-center align-items-center">
-                            <i class="bi bi-grid"></i>
+
+                            <div class="filter more m-auto">
+                                <a class="icon m-auto" href="#" data-bs-toggle="dropdown">
+                                    <i class="bi bi-grid"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                    <h5>Quick switch</h5>
+                                    <li class="mt-3">
+                                        <a class="dropdown-item" href="airtime.html"> Airtime</a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a class="dropdown-item" href="data.html"> Data</a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a class="dropdown-item" href="utility.html"> Utility Bills</a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a class="dropdown-item" href="sltv.html"> SLTV</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="icon d-flex justify-content-center align-items-center">
-                            <i class="bi bi-bell"></i>
+
+                            <div class="filter notification m-auto">
+                                <a class="icon m-auto" href="#" data-bs-toggle="dropdown">
+                                    <i class="bi bi-bell"></i>
+                                    <div class="red-dot"></div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+
+                                    <li class="mt-3">
+                                        <a class="dropdown-item d-flex" href="#">
+                                            <i class="fa fa-bitcoin" aria-hidden="true"></i>
+                                            <div>
+                                                <h5>Deposit alert</h5>
+                                                <small>Lorem ipsum dolor sit amet consectetur.</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a class="dropdown-item d-flex" href="#">
+                                            <i class="fa fa-bitcoin" aria-hidden="true"></i>
+                                            <div>
+                                                <h5>Deposit alert</h5>
+                                                <small>Lorem ipsum dolor sit amet consectetur.</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a class="dropdown-item d-flex" href="#">
+                                            <i class="fa fa-bitcoin" aria-hidden="true"></i>
+                                            <div>
+                                                <h5>Deposit alert</h5>
+                                                <small>Lorem ipsum dolor sit amet consectetur.</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a class="dropdown-item d-flex" href="#">
+                                            <i class="fa fa-bitcoin" aria-hidden="true"></i>
+                                            <div>
+                                                <h5>Deposit alert</h5>
+                                                <small>Lorem ipsum dolor sit amet consectetur.</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a class="dropdown-item text-center " href="#" style="color: #7E1891;">
+                                           View all
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
                         </div>
                         <div class="icon d-flex justify-content-center align-items-center">
                             <div class="filter m-auto">
                                 <a class="icon m-auto" href="#" data-bs-toggle="dropdown">NS</a>
                                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
 
-                                    <li><a class="dropdown-item" href="#">Today</a></li>
-                                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                                    <li class="mt-3">
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fa fa-bitcoin" aria-hidden="true"></i> Nerd Stack
+                                        </a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fa fa-laptop" aria-hidden="true"></i> Transaction
+                                        </a>
+                                    </li>
+                                    <li class="logout mt-3"><a class="dropdown-item " href="#"><i class="fa fa-upload" aria-hidden="true"></i> Logout</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -63,11 +142,11 @@
     </header>
     <main class="mt-5">
         <section>
-            <div class="container mt-3">
-                <div class="workflow m-auto">
+            <div class="container utility mt-3">
+                <div class="workflow  m-auto">
                     <div class="d-flex justify-content-between top">
                         <div class="text">
-                            <h3>Airtime Purchase</h3>
+                            <h3>Utility Purchase</h3>
                             <h5>Balance</h5>
                             <h1>₦3,230.<span>84</span></h1>
                         </div>
@@ -82,37 +161,62 @@
                     <div class="mb-3 contact d-flex justify-content-between align-items-center">
 
                         <div class="dropdown">
-                            <button class="btn dropdown-toggle d-flex align-items-center" type="button" id="customDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="assets/img/mtn.png" class="me-2" alt="mtn" id="selectedImage">
+                            <button class="btn dropdown-toggle d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#meterModal" aria-expanded="false">
+                                    <img src="assets/img/phed.png" class="me-2" alt="phed" id="selectedImage">
                                 </button>
-                            <ul class="dropdown-menu" aria-labelledby="customDropdown" id="dropdownMenu">
-                                <li>
-                                    <a class="dropdown-item d-flex align-items-center" href="#" onclick="selectOption('assets/img/airtel.png', 'airtel')">
-                                        <img src="assets/img/airtel.png" class="me-2" alt="airtel">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item d-flex align-items-center" href="#" onclick="selectOption('assets/img/glo.png', 'glo')">
-                                        <img src="assets/img/glo.png" class="me-2" alt="glo">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item d-flex align-items-center" href="#" onclick="selectOption('assets/img/9mobile.png', '9mobile')">
-                                        <img src="assets/img/9mobile.png" class="me-2" alt="9mobile">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item d-flex align-items-center" href="#" onclick="selectOption('assets/img/mtn.png', 'mtn')">
-                                        <img src="assets/img/mtn.png" class="me-2" alt="mtn">
-                                    </a>
-                                </li>
-                            </ul>
+
+                            <!-- Utility Modal -->
+                            <div class="modal fade" id="meterModal" tabindex="-1" aria-labelledby="meterModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="meterModalLabel">Meter</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <input type="text" placeholder="Search">
+                                            <ul>
+                                                <li>
+                                                    <a href="" onclick="selectOption('assets/img/phed.png', 'phed')">
+                                                        <img src="assets/img/phed.png" alt="PHED"> Port Harcourt Electrity
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="" onclick="selectOption('assets/img/abuja.png', 'abuja')">
+                                                        <img src="assets/img/abuja.png" alt="abuja"> Abuja Electrity </a>
+                                                </li>
+                                                <li>
+                                                    <a href="" onclick="selectOption('assets/img/Enugu.png', 'enugu')">
+                                                        <img src="assets/img/Enugu.png" alt="Enugu"> Enugu Electrity
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="" onclick="selectOption('assets/img/Kaduna.png', 'kaduna')">
+                                                        <img src="assets/img/Kaduna.png" alt="Kaduna"> Kaduna Electrity
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <input type="tel" class="form-control" placeholder="Enter phone number">
+                        <input type="tel" class="form-control" placeholder="Enter Meter Number">
+
+
 
                     </div>
                     <div>
+                        <div class="mt-3 meter">
+                            <select name="" id="" class="form-control">
+                            <option value="">--- Meter Type ---</option>
+                            <option value="">Prepaid</option>
+                            <option value="">Post-Prepaid</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="mt-3">
                         <form>
                             <div class="mb-3 form d-flex justify-content-between align-items-center">
 
@@ -124,76 +228,67 @@
                             </div>
 
 
-                            <!-- First Modal -->
-                            <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="paymentModalLabel">Confirm</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="a">
-                                                    <p>Network</p>
-                                                </div>
-                                                <div class="b d-flex justify-content-between align-items-center">
-                                                    <h6 class="mt-2">MTN</h6>
-                                                    <img src="assets/img/mtn.png" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="a">
-                                                    <p>Amount</p>
-                                                </div>
-                                                <div class="b">
-                                                    <h6 class="mt-2">₦3,500.00</h6>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="a">
-                                                    <p>Recipient</p>
-                                                </div>
-                                                <div class="b">
-                                                    <h6 class="mt-2">09068225050</h6>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <div class="a">
-                                                    <p>Date</p>
-                                                </div>
-                                                <div class="b">
-                                                    <h6 class="mt-2">12 May 2025 : 10:34PM</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
 
-                                            <button type="button" class="proceed" data-bs-toggle="modal" data-bs-target="#passowrdModal" data-bs-dismiss="modal">Proceed</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Second Modal -->
-                            <div class="modal fade" id="passowrdModal" tabindex="-1" aria-labelledby="passowrdModalLabel" aria-hidden="true">
-                                <div class="modal-dialog ">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="passowrdModalLabel">Transaction pin</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body d-flex justify-content-between align-items-center">
-                                            <input maxlength="1" class="password text-center" id="otp1" type="text">
-                                            <input maxlength="1" class="password text-center" id="otp2" type="text">
-                                            <input maxlength="1" class="password text-center" id="otp3" type="text">
-                                            <input maxlength="1" class="password text-center" id="otp4" type="text">
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
                         </form>
+
+                        <!-- Second Modal -->
+                        <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="paymentModalLabel">Confirm</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="a">
+                                                <p>Meter</p>
+                                            </div>
+                                            <div class="b d-flex justify-content-between align-items-center">
+                                                <h6 class="mt-2">PHED</h6>
+                                                <img src="assets/img/phed.png" alt="phed">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="a">
+                                                <p>Amount</p>
+                                            </div>
+                                            <div class="b">
+                                                <h6 class="mt-2">₦3,500.00</h6>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="a">
+                                                <p>Meter type</p>
+                                            </div>
+                                            <div class="b">
+                                                <h6 class="mt-2">Prepaid</h6>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="a">
+                                                <p>Meter Name</p>
+                                            </div>
+                                            <div class="b">
+                                                <h6 class="mt-2">Nerd Stack</h6>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="a">
+                                                <p>Date</p>
+                                            </div>
+                                            <div class="b">
+                                                <h6 class="mt-2">12 May 2025 : 10:34PM</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+
+                                        <button type="button" class="proceed" data-bs-toggle="modal" data-bs-target="#passowrdModal" data-bs-dismiss="modal">Proceed</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <h5 class="mt-5">Quick Top Up</h5>
                     <div class="quick d-flex justify-content-between align-items-center mt-3">
@@ -203,22 +298,22 @@
                         <div class="quick d-flex justify-content-between align-items-center mt-3">
                             <div class="box d-flex justify-content-center align-items-center">
                                 <p class="box d-flex justify-content-center align-items-center">
-                                    <a href="#" onclick="setAmount(50)">₦50</a>
-                                </p>
-                            </div>
-                            <div class="box d-flex justify-content-center align-items-center">
-                                <p class="box d-flex justify-content-center align-items-center">
-                                    <a href="#" onclick="setAmount(100)">₦100</a>
-                                </p>
-                            </div>
-                            <div class="box d-flex justify-content-center align-items-center">
-                                <p class="box d-flex justify-content-center align-items-center">
-                                    <a href="#" onclick="setAmount(500)">₦500</a>
-                                </p>
-                            </div>
-                            <div class="box d-flex justify-content-center align-items-center">
-                                <p class="box d-flex justify-content-center align-items-center">
                                     <a href="#" onclick="setAmount(1000)">₦1,000</a>
+                                </p>
+                            </div>
+                            <div class="box d-flex justify-content-center align-items-center">
+                                <p class="box d-flex justify-content-center align-items-center">
+                                    <a href="#" onclick="setAmount(2000)">₦2,000</a>
+                                </p>
+                            </div>
+                            <div class="box d-flex justify-content-center align-items-center">
+                                <p class="box d-flex justify-content-center align-items-center">
+                                    <a href="#" onclick="setAmount(5000)">₦5,000</a>
+                                </p>
+                            </div>
+                            <div class="box d-flex justify-content-center align-items-center">
+                                <p class="box d-flex justify-content-center align-items-center">
+                                    <a href="#" onclick="setAmount(10000)">₦10,000</a>
                                 </p>
                             </div>
                         </div>
