@@ -329,69 +329,62 @@
 
     <footer>
         <div class="container mt-5 ">
-
             <div class="row d-flex justify-content-between">
-                <div class="col-lg-6 col-md-12">
-                    <div class="copyright mt-3">
+                <div class="col-lg-6 col-md-12 d-flex justify-content-start">
+                    <div class="copyright mt-3  d-flex justify-content-end">
                         <p class="heading">© 2025 Copyright. All right reserved</p>
                     </div>
 
                 </div>
                 <div class="col-lg-6 col-md-12">
-                    <div class="copyright mt-3 d-flex justify-content-end">
+                    <div class="privacy mt-3 d-flex justify-content-lg-end justify-content-md-start">
                         <a href="" class="heading">Privacy Terms & conditions</a>
                     </div>
                 </div>
-            </div>
+                </ </div>
+                <script>
+                    // OTP Functionality
+                    const passwords = document.querySelectorAll('.password');
 
+                    passwords.forEach((input, index) => {
+                        input.addEventListener('keyup', (e) => {
+                            const currentInput = input;
+                            const nextInput = passwords[index + 1];
+                            const prevInput = passwords[index - 1];
 
-        </div>
-    </footer>
+                            if (e.key >= '0' && e.key <= '9') {
+                                // Move to the next input if a number is entered
+                                if (nextInput) {
+                                    nextInput.focus();
+                                } else {
+                                    // Check if all OTP fields are filled
+                                    const otp = Array.from(passwords).map(input => input.value).join('');
+                                    if (otp.length === passwords.length) {
+                                        // Show SweetAlert popup
+                                        Swal.fire({
+                                            icon: 'success',
+                                            title: 'Success!',
+                                            text: 'Transaction was successful.',
+                                            confirmButtonText: 'OK'
+                                        });
+                                    }
+                                }
+                            } else if (e.key === 'Backspace') {
+                                // Move to the previous input if backspace is pressed
+                                if (prevInput) {
+                                    prevInput.focus();
+                                }
+                            }
+                        });
+                    });
+                </script>
+                <!-- Scroll Top -->
+                <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+                <script src="assets/js/main.js"></script>
 
-    </div>
-    <script>
-        // OTP Functionality
-        const passwords = document.querySelectorAll('.password');
-
-        passwords.forEach((input, index) => {
-            input.addEventListener('keyup', (e) => {
-                const currentInput = input;
-                const nextInput = passwords[index + 1];
-                const prevInput = passwords[index - 1];
-
-                if (e.key >= '0' && e.key <= '9') {
-                    // Move to the next input if a number is entered
-                    if (nextInput) {
-                        nextInput.focus();
-                    } else {
-                        // Check if all OTP fields are filled
-                        const otp = Array.from(passwords).map(input => input.value).join('');
-                        if (otp.length === passwords.length) {
-                            // Show SweetAlert popup
-                            Swal.fire({
-                                icon: 'success',
-                                title: 'Success!',
-                                text: 'Transaction was successful.',
-                                confirmButtonText: 'OK'
-                            });
-                        }
-                    }
-                } else if (e.key === 'Backspace') {
-                    // Move to the previous input if backspace is pressed
-                    if (prevInput) {
-                        prevInput.focus();
-                    }
-                }
-            });
-        });
-    </script>
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-    <script src="assets/js/main.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js " integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin=" anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                <script src="https://code.jquery.com/jquery-3.7.1.min.js " integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin=" anonymous "></script>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
 

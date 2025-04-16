@@ -1,5 +1,6 @@
 /* Smooth scroll */
 
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
  :root {
     scroll-behavior: smooth;
 }
@@ -10,7 +11,7 @@ li {
 
 a {
     text-decoration: none;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 600;
     font-style: normal;
 }
@@ -39,15 +40,6 @@ li a {
     background-color: var(--background-color);
 }
 
-
-/* .header .topbar {
-    background-color: color-mix(in srgb, var(--accent-color) 90%, black 10%);
-    height: 40px;
-    padding: 0;
-    font-size: 14px;
-    transition: all 0.5s;
-} */
-
 @media (max-width: 575px) {
     .header .topbar .contact-info i a,
     .header .topbar .contact-info i span {
@@ -66,7 +58,7 @@ li a {
 
 .header .logo img {
     max-height: 36px;
-    margin-right: 15px;
+    margin: 0px 20px;
 }
 
 .scrolled .header {
@@ -84,11 +76,11 @@ li a {
 @media (min-width: 1200px) {
     header .nav-body {
         border: #c9c9c9 solid 1px;
-        border-radius: 30px;
-        width: 60%;
-        padding: 0 70px;
+        border-radius: 10px;
+        /* width: 75%;
+        padding: 0 20px; */
         background-color: #f9f9f9;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     }
     .navmenu {
         padding: 0;
@@ -96,6 +88,8 @@ li a {
     .navmenu ul {
         margin: 0;
         padding: 0;
+        color: #49557e;
+        gap: 5px;
         display: flex;
         list-style: none;
         align-items: center;
@@ -115,7 +109,6 @@ li a {
         color: #000;
         font-size: 15px;
         padding: 0 2px;
-        font-family: var(--nav-font);
         font-weight: 500;
         display: flex;
         align-items: center;
@@ -129,8 +122,8 @@ li a {
     .navmenu .get-started {
         background-color: #7E1891;
         color: #fff;
-        border-radius: 30px;
-        padding: 15px 45px;
+        border-radius: 10px;
+        padding: 10px 35px;
     }
     .navmenu .get-started::before {
         content: "";
@@ -139,12 +132,6 @@ li a {
         bottom: 0;
         left: 0;
         visibility: hidden;
-        color: #fff;
-    }
-    .navmenu a .get-started:hover {
-        color: #fff;
-    }
-    .navmenu a .get-started .active {
         color: #fff;
     }
 }
@@ -361,7 +348,7 @@ section,
 }
 
 .hero h1 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 800;
     font-style: normal;
     margin: 0;
@@ -393,7 +380,7 @@ section,
 }
 
 .hero p {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 600;
     font-style: normal;
 }
@@ -406,13 +393,13 @@ section,
 }
 
 .trusted .top h5 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 600;
     font-style: normal;
 }
 
 .trusted h3 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 700;
     font-style: normal;
 }
@@ -426,13 +413,13 @@ section,
     width: 700px;
     margin: 30px auto;
     text-align: center;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 700;
     font-style: normal;
 }
 
 .trusted h2 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 700;
     font-style: normal;
 }
@@ -492,20 +479,20 @@ section,
 }
 
 .trusted .box .bottom .content p {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 600;
     font-style: normal;
 }
 
 .trusted .box .bottom .content h4 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 700;
     font-style: normal;
 }
 
 .trusted .box select {
     width: 100%;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 700;
     font-style: normal;
     font-size: 1.5rem;
@@ -528,7 +515,7 @@ section,
 }
 
 .security p {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 500;
     font-style: normal;
 }
@@ -548,7 +535,7 @@ section,
     padding: 20px;
     border: solid 1px #333;
     border-radius: 15px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 500;
     font-style: normal;
 }
@@ -597,7 +584,7 @@ footer form {
 
 footer form label {
     font-size: 1.5rem;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 600;
     font-style: normal;
 }
@@ -610,7 +597,7 @@ footer form input {
     margin: 30px auto;
     padding: 10px 20px;
     font-size: 1rem;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 500;
     font-style: normal;
 }
@@ -639,13 +626,13 @@ footer form button {
 }
 
 .about .box-a h2 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 600;
     font-style: normal;
 }
 
 .about .box-a p {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 600;
     font-style: normal;
 }
@@ -678,7 +665,7 @@ footer form button {
 }
 
 .faqs .box-a h2 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 600;
     font-style: normal;
 }
@@ -732,7 +719,7 @@ nav .icon a {
 
 .workflow {
     width: 60%;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
 }
 
 .workflow form input {
@@ -778,7 +765,7 @@ nav .icon a {
     height: 70px;
     background: transparent;
     font-size: 1.2rem;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 500;
     font-style: normal;
 }
@@ -797,7 +784,7 @@ nav .icon a {
     height: 60px;
     background: transparent;
     font-size: 1.2rem;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 500;
     font-style: normal;
 }
@@ -863,7 +850,7 @@ nav .icon a {
     height: 100px;
     width: 180px;
     font-size: 1.2rem;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 500;
     font-style: normal;
 }
@@ -878,7 +865,7 @@ nav .filter a {
 }
 
 .modal h6 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 700;
     font-style: normal;
 }
@@ -908,7 +895,7 @@ nav .filter a {
     margin-bottom: 50px;
     border: solid 1px #7E1891;
     font-size: 1.2rem;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 500;
     font-style: normal;
 }
@@ -945,13 +932,13 @@ nav .filter a {
 .data a {
     text-decoration: none;
     color: #000;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 500;
     font-style: normal;
 }
 
 .data .heading {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 700;
     font-style: normal;
 }
@@ -1243,7 +1230,7 @@ nav .filter a {
     color: #fff;
     margin-bottom: 50px;
     font-size: 1.2rem;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 500;
     font-style: normal;
 }
@@ -1267,7 +1254,7 @@ nav .filter a {
     background-color: #fff;
     color: #000;
     font-size: 1.2rem;
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit";
     font-weight: 500;
     font-style: normal;
     border: solid 1px #000;
@@ -1434,14 +1421,14 @@ nav .filter a {
     margin: 10px 0;
 }
 
-.SLTV .skeleton-box {
+.sltv .skeleton-box {
     width: 100% !important;
     background-color: rgb(239, 239, 239);
     padding: 0 30px;
     margin: 0;
 }
 
-.SLTV .skeleton-paragraph {
+.sltv .skeleton-paragraph {
     width: 600px;
     height: 15px;
     margin: 10px 0;
@@ -1588,7 +1575,7 @@ nav .filter a {
         margin-right: 300px;
     }
     .hero h1 {
-        font-family: "Poppins", sans-serif;
+        font-family: "Outfit";
         font-weight: 800;
         font-style: normal;
         margin: 0;
@@ -1616,7 +1603,7 @@ nav .filter a {
         margin: 30px auto;
         margin-top: 30px;
         text-align: center;
-        font-family: "Poppins", sans-serif;
+        font-family: "Outfit";
         font-weight: 700;
         font-style: normal;
     }
@@ -1628,12 +1615,12 @@ nav .filter a {
         width: 90%;
         margin: 30px auto;
         text-align: center;
-        font-family: "Poppins", sans-serif;
+        font-family: "Outfit";
         font-weight: 700;
         font-style: normal;
     }
     .trusted h2 {
-        font-family: "Poppins", sans-serif;
+        font-family: "Outfit";
         font-weight: 700;
         font-style: normal;
     }
@@ -1692,20 +1679,20 @@ nav .filter a {
         margin: auto;
     }
     .trusted .box .bottom .content p {
-        font-family: "Poppins", sans-serif;
+        font-family: "Outfit";
         font-weight: 600;
         font-style: normal;
         text-align: center;
     }
     .trusted .box .bottom .content h4 {
-        font-family: "Poppins", sans-serif;
+        font-family: "Outfit";
         font-weight: 700;
         font-style: normal;
         margin-bottom: 30px;
     }
     .trusted .box select {
         width: 100%;
-        font-family: "Poppins", sans-serif;
+        font-family: "Outfit";
         font-weight: 700;
         font-style: normal;
         font-size: 1.5rem;
@@ -1724,7 +1711,7 @@ nav .filter a {
         margin-right: 10px;
     }
     .security p {
-        font-family: "Poppins", sans-serif;
+        font-family: "Outfit";
         font-weight: 500;
         font-style: normal;
     }
@@ -1742,7 +1729,7 @@ nav .filter a {
         padding: 20px;
         border: solid 1px #333;
         border-radius: 15px;
-        font-family: "Poppins", sans-serif;
+        font-family: "Outfit";
         font-weight: 500;
         font-style: normal;
     }
@@ -1750,7 +1737,7 @@ nav .filter a {
         font-size: 2rem;
     }
     footer {
-        margin: 40px;
+        margin: 20px 0px;
     }
     footer a {
         color: #000;
@@ -1782,7 +1769,7 @@ nav .filter a {
     }
     footer form label {
         font-size: 1.2rem;
-        font-family: "Poppins", sans-serif;
+        font-family: "Outfit";
         font-weight: 600;
         font-style: normal;
         text-align: center;
@@ -1795,7 +1782,7 @@ nav .filter a {
         margin: 30px auto;
         padding: 10px 20px;
         font-size: 1rem;
-        font-family: "Poppins", sans-serif;
+        font-family: "Outfit";
         font-weight: 500;
         font-style: normal;
     }
@@ -1816,14 +1803,11 @@ nav .filter a {
     }
     .disclaimer h5 {
         font-size: 1rem;
-        font-family: "Poppins", sans-serif;
+        font-family: "Outfit";
         font-weight: 500;
         font-style: italic;
         line-height: 20px;
         text-align: justify;
-    }
-    .copyright {
-        margin-bottom: 50px;
     }
     .faqs .box-a {
         margin: auto;
@@ -1892,7 +1876,7 @@ nav .filter a {
         margin: 0;
         background: transparent;
         font-size: 1rem;
-        font-family: "Poppins", sans-serif;
+        font-family: "Outfit";
         font-weight: 500;
         font-style: normal;
     }
@@ -1940,6 +1924,13 @@ nav .filter a {
     .copyright {
         margin: 0px;
     }
+    .membership-type {
+        height: 50px;
+        padding: 5px 2px;
+    }
+    .membership-type a {
+        height: 40px;
+    }
     .data {
         padding-top: 30px;
     }
@@ -1963,7 +1954,7 @@ nav .filter a {
     .data a {
         text-decoration: none;
         color: #000;
-        font-family: "Poppins", sans-serif;
+        font-family: "Outfit";
         font-weight: 500;
         font-style: normal;
     }
@@ -1990,6 +1981,9 @@ nav .filter a {
         width: 150px;
         margin: 10px auto;
         box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+    }
+    .meter {
+        height: 50px;
     }
     .table> :not(caption)>*>* {
         padding: .2rem .2rem !important;
@@ -2050,18 +2044,18 @@ nav .filter a {
     .contact .btn {
         width: 100%;
     }
-    .SLTV .skeleton-box {
+    .sltv .skeleton-box {
         width: 100% !important;
         background-color: #ffffff;
         padding: 0 30px;
         margin: 0;
     }
-    .SLTV .skeleton-paragraph {
-        width: 350px;
+    .sltv .skeleton-paragraph {
+        width: 300px;
         height: 15px;
         margin: 10px 0;
     }
-    .SLTV .skeleton-short-paragraph {
+    .sltv .skeleton-short-paragraph {
         width: 100px;
         height: 15px;
         margin: 10px 0;

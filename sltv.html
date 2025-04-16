@@ -142,7 +142,7 @@
     </header>
     <main class="mt-5">
         <section>
-            <div class="container SLTV mt-3">
+            <div class="container sltv mt-3">
                 <div class="workflow  m-auto">
                     <div class="d-flex justify-content-between top">
                         <div class="text">
@@ -303,57 +303,50 @@
 
     <footer>
         <div class="container mt-5 ">
-
             <div class="row d-flex justify-content-between">
-                <div class="col-lg-6 col-md-12">
-                    <div class="copyright mt-3">
+                <div class="col-lg-6 col-md-12 d-flex justify-content-start">
+                    <div class="copyright mt-3  d-flex justify-content-end">
                         <p class="heading">© 2025 Copyright. All right reserved</p>
                     </div>
 
                 </div>
                 <div class="col-lg-6 col-md-12">
-                    <div class="copyright mt-3 d-flex justify-content-end">
+                    <div class="privacy mt-3 d-flex justify-content-lg-end justify-content-md-start">
                         <a href="" class="heading">Privacy Terms & conditions</a>
                     </div>
                 </div>
-            </div>
+                </ </div>
+                <script>
+                    // Simulate loading and replace skeleton loader with actual content
+                    document.addEventListener("DOMContentLoaded", () => {
+                        // Simulate a delay for loading (e.g., 2 seconds)
+                        setTimeout(() => {
+                            const dataContainer = document.getElementById("data-container");
 
+                            // Clear the skeleton loader
+                            dataContainer.innerHTML = '';
 
-        </div>
-    </footer>
+                            const colDiv = document.createElement('div');
+                            colDiv.className = 'verify-user d-flex justify-content-between align-items-center';
 
-    </div>
-    <script>
-        // Simulate loading and replace skeleton loader with actual content
-        document.addEventListener("DOMContentLoaded", () => {
-            // Simulate a delay for loading (e.g., 2 seconds)
-            setTimeout(() => {
-                const dataContainer = document.getElementById("data-container");
-
-                // Clear the skeleton loader
-                dataContainer.innerHTML = '';
-
-                const colDiv = document.createElement('div');
-                colDiv.className = 'verify-user d-flex justify-content-between align-items-center';
-
-                colDiv.innerHTML = `
+                            colDiv.innerHTML = `
                 <h5> <i class="fa fa-star" aria-hidden="true"></i> Nerd Stack</h5>
                 <p>Verified</p>
             `;
 
-                // Append the created div to the container
-                dataContainer.appendChild(colDiv);
+                            // Append the created div to the container
+                            dataContainer.appendChild(colDiv);
 
-            }, 2000); // 2-second delay
-        });
-    </script>
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-    <script src="assets/js/main.js"></script>
+                        }, 2000); // 2-second delay
+                    });
+                </script>
+                <!-- Scroll Top -->
+                <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+                <script src="assets/js/main.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js " integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin=" anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                <script src="https://code.jquery.com/jquery-3.7.1.min.js " integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin=" anonymous "></script>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
 
