@@ -127,11 +127,15 @@
                                         </a>
                                     </li>
                                     <li class="mt-3">
-                                        <a class="dropdown-item" href="#">
+                                        <a class="dropdown-item" href="Transaction.html">
                                             <i class="bi bi-clock-history"></i> Transaction
                                         </a>
                                     </li>
+                                    <li class="mt-3"><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#virtualAccountModal"><i class="bi bi-cash"></i>
+                                        Virtual account
+                                    </a></li>
                                     <li class="logout mt-3"><a class="dropdown-item " href="#"><i class="bi bi-box-arrow-left"></i> Logout</a></li>
+
                                 </ul>
                             </div>
                         </div>
@@ -264,10 +268,9 @@
                             </div>
                         </div>
                     </div>
+
                     <h5 class="mt-5">Quick Top Up</h5>
                     <div class="quick d-flex justify-content-between align-items-center mt-3">
-
-
                         <!-- Quick Top-Up Options -->
                         <div class="quick d-flex justify-content-between align-items-center mt-3">
                             <div class="box d-flex justify-content-center align-items-center">
@@ -298,6 +301,36 @@
             </div>
             </div>
         </section>
+        <!-- Virtual Account Modal -->
+        <div class="modal fade virtual-account" id="virtualAccountModal" tabindex="-1" aria-labelledby="virtualAccountModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="virtualAccountModalLabel">Virtual Account</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="account d-flex">
+                                <img src="assets/img/wema.png" alt="">
+                                <div class="account">
+                                    <h5>Wema bank</h5>
+                                    <small>subscriber/Obuna</small>
+                                </div>
+                            </div>
+                            <div id="notification-popup" class="notification-popup hidden">
+                                <p id="notification-message"></p>
+                            </div>
+                            <div class="account-number m-auto mt-5 d-flex justify-content-between align-items-center">
+                                <input type="text" readonly value="7823837294">
+                                <img src="assets/img/copy.png" alt="" id="copy">
+                            </div>
+                            <p class="mt-5">Transaction event usually occurs within 5 minutes. In case of delays, please be patient as your money will definitely reflect.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
 
@@ -315,38 +348,72 @@
                         <a href="" class="heading">Privacy Terms & conditions</a>
                     </div>
                 </div>
-                </ </div>
-                <script>
-                    // Simulate loading and replace skeleton loader with actual content
-                    document.addEventListener("DOMContentLoaded", () => {
-                        // Simulate a delay for loading (e.g., 2 seconds)
-                        setTimeout(() => {
-                            const dataContainer = document.getElementById("data-container");
+            </div>
+            <script>
+                // Simulate loading and replace skeleton loader with actual content
+                document.addEventListener("DOMContentLoaded", () => {
+                    // Simulate a delay for loading (e.g., 2 seconds)
+                    setTimeout(() => {
+                        const dataContainer = document.getElementById("data-container");
 
-                            // Clear the skeleton loader
-                            dataContainer.innerHTML = '';
+                        // Clear the skeleton loader
+                        dataContainer.innerHTML = '';
 
-                            const colDiv = document.createElement('div');
-                            colDiv.className = 'verify-user d-flex justify-content-between align-items-center';
+                        const colDiv = document.createElement('div');
+                        colDiv.className = 'verify-user d-flex justify-content-between align-items-center';
 
-                            colDiv.innerHTML = `
+                        colDiv.innerHTML = `
                 <h5> <i class="fa fa-star" aria-hidden="true"></i> Nerd Stack</h5>
                 <p>Verified</p>
             `;
 
-                            // Append the created div to the container
-                            dataContainer.appendChild(colDiv);
+                        // Append the created div to the container
+                        dataContainer.appendChild(colDiv);
 
-                        }, 2000); // 2-second delay
+                    }, 2000); // 2-second delay
+                });
+
+                // Function to show the notification popup
+                function showNotification(message) {
+                    const notification = document.getElementById('notification-popup');
+                    const notificationMessage = document.getElementById('notification-message');
+
+                    // Set the message
+                    notificationMessage.textContent = message;
+
+                    // Show the notification
+                    notification.classList.remove('hidden');
+                    notification.classList.add('show');
+
+                    // Hide the notification after 3 seconds
+                    setTimeout(() => {
+                        notification.classList.remove('show');
+                        notification.classList.add('hidden');
+                    }, 3000);
+                }
+                // Copy functionality for the account number
+                document.getElementById('copy').addEventListener('click', () => {
+                    // Get the input field value
+                    const accountNumber = document.querySelector('.account-number input').value;
+
+                    // Copy the value to the clipboard
+                    navigator.clipboard.writeText(accountNumber).then(() => {
+                        // Show a success notification
+                        showNotification('Account number copied to clipboard!');
+                    }).catch(err => {
+                        // Show an error notification
+                        showNotification('Failed to copy account number.');
+                        console.error('Failed to copy: ', err);
                     });
-                </script>
-                <!-- Scroll Top -->
-                <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-                <script src="assets/js/main.js"></script>
+                });
+            </script>
+            <!-- Scroll Top -->
+            <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+            <script src="assets/js/main.js"></script>
 
-                <script src="https://code.jquery.com/jquery-3.7.1.min.js " integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin=" anonymous "></script>
-                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script src="https://code.jquery.com/jquery-3.7.1.min.js " integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin=" anonymous "></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
 

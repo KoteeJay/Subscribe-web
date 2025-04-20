@@ -14,6 +14,7 @@ a {
     font-family: "Outfit";
     font-weight: 600;
     font-style: normal;
+    color: #000;
 }
 
 li a {
@@ -877,15 +878,13 @@ nav .filter a {
 }
 
 .modal img {
-    width: 30px;
+    width: 100px;
     margin-left: 10px;
 }
 
-.modal .proceed {
-    width: 90%;
-    background-color: #7E1891;
-    border: none;
-    margin: auto;
+.modal a {
+    text-decoration: none;
+    color: #000;
 }
 
 .modal .password {
@@ -893,11 +892,240 @@ nav .filter a {
     height: 50px;
     background-color: #d2d2d2;
     margin-bottom: 50px;
-    border: solid 1px #7E1891;
+    border-radius: 5px;
     font-size: 1.2rem;
     font-family: "Outfit";
     font-weight: 500;
     font-style: normal;
+    outline: none !important;
+    border: none !important;
+}
+
+.modal .password:focus {
+    outline: none !important;
+    border: none !important;
+}
+
+.modal .proceed {
+    width: 100%;
+    background-color: #7E1891;
+    border: none;
+    margin: auto;
+}
+
+.airtime #passowrdModal .modal-body {
+    padding: 70px 30px;
+}
+
+.airtime .workflow img {
+    width: 30px;
+}
+
+#passowrdModal .password {
+    width: 80px;
+    height: 50px;
+    background-color: #d2d2d2;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-family: "Outfit";
+    font-weight: 500;
+    font-style: normal;
+}
+
+.pin form {
+    border: solid 2px #7E1891;
+    border-radius: 15px;
+    padding: 50px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, .1);
+}
+
+.pin form label {
+    font-size: 1.2rem;
+    font-family: "Outfit";
+    font-weight: 700;
+    font-style: normal;
+}
+
+.pin form input {
+    border: none;
+    border-radius: 8px;
+    width: 80px;
+    height: 60px;
+    background: #f5f5f5;
+    font-size: 1.2rem;
+    font-family: "Outfit";
+    font-weight: 500;
+    font-style: normal;
+}
+
+.pin form input:focus {
+    outline: none;
+}
+
+.pin form a {
+    text-decoration: none;
+    color: #000;
+}
+
+.pin #passowrdModal a p {
+    border-bottom: #000 solid 2px;
+}
+
+.pin form .proceed {
+    width: 100%;
+    background-color: #7E1891;
+    color: #fff;
+    border: none;
+    margin: auto;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.pin form .proceed:hover {
+    background-color: #9a3eaa;
+}
+
+.virtual-account form {
+    border-radius: 15px;
+    padding: 50px;
+}
+
+.virtual-account .modal img {
+    width: 100px;
+    margin: 0 20px 0 0;
+}
+
+.virtual-account .account img {
+    width: 60px;
+    margin: 0 20px 0 0;
+}
+
+.virtual-account .account-number {
+    width: 100%;
+    border-radius: 8px;
+    border: solid 1px #000;
+    background-color: #f5f5f5;
+    padding: 0 10px;
+}
+
+.virtual-account .account-number {
+    width: 100%;
+    height: 50px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.virtual-account .account-number input {
+    width: 95%;
+    height: 100%;
+    padding-left: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+.virtual-account .account-number input:focus {
+    outline: none !important;
+}
+
+.virtual-account .account-number img {
+    width: 7%;
+    cursor: pointer;
+}
+
+.virtual-account #passowrdModal .modal-body {
+    padding: 30px 30px;
+}
+
+.forgot-password .modal img {
+    width: 100px;
+    margin: 0 20px 0 0;
+}
+
+.forgot-password .account-number input {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.forgot-password label {
+    font-size: 1.2rem;
+    font-family: "Outfit";
+    font-weight: 700;
+    font-style: normal;
+}
+
+.forgot-password input {
+    border: solid 1px #000;
+    border-radius: 8px;
+    padding-left: 10px;
+    width: 100%;
+    height: 60px;
+    background: #f5f5f5;
+    font-size: 1.2rem;
+    font-family: "Outfit";
+    font-weight: 500;
+    font-style: normal;
+}
+
+.login #confirmModal input {
+    border: none;
+    border-radius: 5px;
+    width: 75px;
+    height: 60px;
+    background: #eaeaea;
+    font-size: 1.2rem;
+    font-family: "Outfit";
+    font-weight: 500;
+    font-style: normal;
+}
+
+.forgot-password form .proceed {
+    width: 100%;
+    background-color: #7E1891;
+    color: #fff;
+    border: none;
+    margin: auto;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.forgot-password form .proceed:hover {
+    background-color: #9a3eaa;
+}
+
+.forgot-password .modal input:focus {
+    color: #fff;
+    outline: none;
+    border-radius: 5px;
+}
+
+
+/* Notification Popup Styles */
+
+.notification-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background-color: #7E1891;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+.notification-popup.show {
+    top: 20%;
+    transform: translate(-50%, 0) scale(1);
+    opacity: 1;
+}
+
+.notification-popup.hidden {
+    display: none;
 }
 
 
@@ -1035,14 +1263,34 @@ nav .filter a {
     border-radius: 15px;
     height: 70px;
     padding: 5px;
+    position: relative;
+    color: #000;
 }
 
-.meter select {
-    border: none;
-    height: 40px;
+.meter small {
+    margin-left: 10px;
 }
 
-.meter select:focus {
+.meter-select {
+    width: 100%;
+    border: none !important;
+}
+
+.meter::after {
+    content: '▼';
+    font-size: 14px;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    border: #000 1px solid;
+    padding: 4px 8px;
+    border-radius: 50px;
+}
+
+.meter-select:focus {
     outline: none !important;
     box-shadow: none !important;
     border: none !important;
@@ -1056,6 +1304,13 @@ nav .filter a {
     padding-left: 10px;
 }
 
+.utility #meterModal input:focus {
+    border-radius: 8px;
+    padding-left: 10px;
+    border: solid 1px #999;
+    outline: #000;
+}
+
 .utility .modal img {
     width: 30px;
     height: 30px;
@@ -1063,19 +1318,22 @@ nav .filter a {
 }
 
 .utility .modal ul {
-    padding: 0;
+    padding: 5px;
 }
 
-.utility .modal li {
-    margin: 10px 0;
-}
-
-.utility .modal-body a {
-    text-decoration: none;
+.utility #meterModal li a {
     color: #000;
-    padding: 10px 0;
-    /* background-color: #7E1891; */
+    background-color: #f5f5f5;
     border-radius: 8px;
+    margin: 10px 0;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.utility #meterModal ul a:hover {
+    color: #fff;
+    background-color: #7E1891 !important;
 }
 
 .utility .proceed {
@@ -1133,13 +1391,17 @@ nav .filter a {
 }
 
 .modal .proceed {
-    width: 90%;
+    width: 100%;
     background-color: #7E1891;
     color: #fff;
     border: none;
     margin: auto;
     height: 50px;
     border-radius: 8px;
+}
+
+.proceed:hover {
+    background-color: #9a3eaa;
 }
 
 
@@ -1154,6 +1416,101 @@ nav .filter a {
 .transaction tbody a {
     text-decoration: none;
     color: #7E1891;
+}
+
+.transaction .modal-dialog {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    margin: 0px;
+    width: 600px;
+}
+
+.transaction .modal-dialog,
+.modal-content {
+    height: 100%;
+}
+
+.modal-body .b img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.transaction .skeleton {
+    background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+}
+
+.transaction .skeleton-box {
+    width: 100%;
+    padding: 0 10px;
+}
+
+.transaction .skeleton-box .box-a {
+    width: 50%;
+}
+
+.transaction .skeleton-box .box-b {
+    width: 50%;
+    display: block;
+    justify-content: flex-end;
+}
+
+.transaction .skeleton-short-paragraph {
+    width: 60%;
+    height: 15px;
+    margin: 10px 0;
+}
+
+.transaction .skeleton-veryshort-paragraph {
+    width: 30%;
+    height: 15px;
+    margin: 10px 0;
+}
+
+.transaction .skeleton-paragraph {
+    width: 80%;
+    height: 15px;
+    margin: 10px 0;
+}
+
+.transaction .long {
+    width: 80%;
+    height: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.transaction .mid {
+    width: 50%;
+    height: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.transaction .short {
+    width: 40%;
+    height: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.transaction .modal-content {
+    height: 100%;
+}
+
+.transaction .refresh a {
+    color: #000;
+    text-decoration: none;
+}
+
+.transaction .refresh p {
+    border-radius: 20px;
+    padding: 5px;
+    border: #000 solid 1px;
+    margin: 20px;
 }
 
 
@@ -1233,6 +1590,7 @@ nav .filter a {
     font-family: "Outfit";
     font-weight: 500;
     font-style: normal;
+    border-radius: 8px;
 }
 
 .profile .pin {
@@ -1285,12 +1643,12 @@ nav .filter a {
     width: 30%;
     height: 100%;
     border-radius: 0px 30px 30px 0px;
-    padding: 30px;
+    padding-left: 30px;
 }
 
 .auth a {
     color: #000;
-    font-size: 13px;
+    font-size: 15px;
     text-align: end;
 }
 
@@ -1367,9 +1725,18 @@ nav .filter a {
     width: 100%;
 }
 
+.auth .right .button {
+    background-color: transparent;
+}
+
+.auth .button:hover {
+    background-color: transparent;
+}
+
 .auth .margin {
     width: 50px;
     height: 150px;
+    margin: 10px 0;
 }
 
 .auth .right .btna {
@@ -1438,6 +1805,14 @@ nav .filter a {
     width: 60%;
     height: 15px;
     margin: 10px 0;
+}
+
+.workflow form button:hover {
+    background-color: #903c9f;
+}
+
+.button:hover {
+    background-color: #903c9f;
 }
 
 
@@ -1642,7 +2017,7 @@ nav .filter a {
     }
     .trusted .box .icons {
         background-color: #fff;
-        padding: 10px 0;
+        padding: 0;
         width: 80%;
         margin: auto;
         border-radius: 20px;
@@ -1801,6 +2176,9 @@ nav .filter a {
         background-color: #7E1891;
         color: #fff;
     }
+    footer form button:hover {
+        background-color: #903c9f;
+    }
     .disclaimer h5 {
         font-size: 1rem;
         font-family: "Outfit";
@@ -1888,6 +2266,9 @@ nav .filter a {
         height: 50px;
         border-radius: 15px;
     }
+    .workflow form button:hover {
+        background-color: #903c9f;
+    }
     .workflow img {
         width: 50px;
     }
@@ -1908,6 +2289,14 @@ nav .filter a {
         width: 30px;
         height: 30px;
         object-fit: cover;
+    }
+    #passowrdModal .password {
+        width: 65px;
+        height: 40px;
+        background-color: #d2d2d2;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        font-size: 1rem;
     }
     .quick {
         width: 100%;
@@ -1988,6 +2377,13 @@ nav .filter a {
     .table> :not(caption)>*>* {
         padding: .2rem .2rem !important;
     }
+    .profile #confirmModal input {
+        width: 60px;
+        height: 40px;
+        background-color: #7E1891;
+        font-size: 1rem;
+        border-radius: 8px;
+    }
     .auth {
         margin-top: 100px;
         width: 100%;
@@ -2024,6 +2420,9 @@ nav .filter a {
         color: #fff;
         padding: 10px;
         margin-top: 20px;
+    }
+    .auth button {
+        background-color: #903c9f;
     }
     .auth .line {
         margin-top: 10px;
@@ -2064,6 +2463,41 @@ nav .filter a {
         min-width: 150px;
         min-height: 150px;
         padding: 20px;
+    }
+    .meter small {
+        position: relative;
+        position: absolute;
+        margin-top: -5px;
+    }
+    .meter-select {
+        height: 35px;
+        margin-top: 5px;
+        background-color: transparent;
+    }
+    .quick .box a {
+        font-size: 15px;
+    }
+    .transaction .skeleton-button {
+        width: 250px;
+        height: 30px;
+        margin: 15px 70px;
+        position: fixed;
+        bottom: 90px;
+        right: 0;
+        border-radius: 8px;
+    }
+    .virtual-account .account-number img {
+        width: 10%;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 576px) {
+    .transaction .modal-dialog {
+        position: relative;
+        margin: 0px auto;
+        width: 90%;
+        height: 90%;
     }
 }
 

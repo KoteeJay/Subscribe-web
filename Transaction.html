@@ -127,11 +127,15 @@
                                         </a>
                                     </li>
                                     <li class="mt-3">
-                                        <a class="dropdown-item" href="#">
+                                        <a class="dropdown-item" href="Transaction.html">
                                             <i class="bi bi-clock-history"></i> Transaction
                                         </a>
                                     </li>
+                                    <li class="mt-3"><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#virtualAccountModal"><i class="bi bi-cash"></i>
+                                        Virtual account
+                                    </a></li>
                                     <li class="logout mt-3"><a class="dropdown-item " href="#"><i class="bi bi-box-arrow-left"></i> Logout</a></li>
+
                                 </ul>
                             </div>
                         </div>
@@ -202,67 +206,59 @@
                         </table>
                         <!-- Transaction Modal -->
                         <div class="modal fade" id="transactionModal" tabindex="-1" aria-labelledby="transactionModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
+                            <div class="modal-dialog modal-dialog-end" id="data-container">
+                                <div class="col-lg-3 col-6">
+                                    <a href="#" class="box text-center d-flex justify-content-center align-items-center " data-bs-toggle="modal" data-bs-target="#dataModal">
+                                    </a>
+                                </div>
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="transactionModalLabel">History log</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <div class="modal-body">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="a">
-                                                <p>Service type</p>
-                                            </div>
-                                            <div class="b d-flex justify-content-between align-items-center">
-                                                <h6 class="mt-2">PHED</h6>
-                                                <img src="assets/img/slt.png" alt="sltv">
-                                            </div>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="a">
-                                                <p>Amount</p>
-                                            </div>
-                                            <div class="b">
-                                                <h6 class="mt-2">₦3,500.00</h6>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="a">
-                                                <p>Recipient</p>
-                                            </div>
-                                            <div class="b">
-                                                <h6 class="mt-2">09068225050</h6>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="a">
-                                                <p>Reference</p>
-                                            </div>
-                                            <div class="b">
-                                                <h6 class="mt-2">28323_bsdus2_342</h6>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="a">
-                                                <p>Date</p>
-                                            </div>
-                                            <div class="b">
-                                                <h6 class="mt-2">12 May 2025 : 10:34PM</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
+                                    <div class=" skeleton-box d-flex justify-content-between ">
+                                        <div class="box-a">
+                                            <div class="skeleton skeleton-paragraph mt-4"></div>
+                                            <div class="skeleton skeleton-short-paragraph mt-4"></div>
+                                            <div class="skeleton skeleton-short-paragraph mt-4"></div>
+                                            <div class="skeleton skeleton-veryshort-paragraph mt-4"></div>
 
-                                        <button type="button" class="proceed" data-bs-toggle="modal" data-bs-target="#passowrdModal" data-bs-dismiss="modal">Proceed</button>
+                                            <div class="skeleton skeleton-paragraph mt-4"></div>
+
+                                            <div class="skeleton skeleton-short-paragraph mt-4"></div>
+
+                                        </div>
+                                        <div class="box-b d-block justify-content-end">
+                                            <div class="d-flex justify-content-end">
+                                                <div class="skeleton long mt-3"></div>
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <div class="skeleton mid mt-3"></div>
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <div class="skeleton long mt-3"></div>
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <div class="skeleton short mt-3"></div>
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <div class="skeleton mid mt-3"></div>
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <div class="skeleton long mt-3"></div>
+                                            </div>
+                                        </div>
                                     </div>
+
+                                    <div class="modal-footer mt-5">
+                                        <button type="button" class="proceed mt-5" data-bs-dismiss="modal">Dismiss</button>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
-
             </div>
             </div>
         </section>
@@ -283,50 +279,132 @@
                         <a href="" class="heading">Privacy Terms & conditions</a>
                     </div>
                 </div>
-                </ </div>
-                <script>
-                    // OTP Functionality
-                    const passwords = document.querySelectorAll('.password');
+            </div>
+        </div>
+    </footer>
+    <script>
+        // OTP Functionality
+        const passwords = document.querySelectorAll('.password');
 
-                    passwords.forEach((input, index) => {
-                        input.addEventListener('keyup', (e) => {
-                            const currentInput = input;
-                            const nextInput = passwords[index + 1];
-                            const prevInput = passwords[index - 1];
+        passwords.forEach((input, index) => {
+            input.addEventListener('keyup', (e) => {
+                const currentInput = input;
+                const nextInput = passwords[index + 1];
+                const prevInput = passwords[index - 1];
 
-                            if (e.key >= '0' && e.key <= '9') {
-                                // Move to the next input if a number is entered
-                                if (nextInput) {
-                                    nextInput.focus();
-                                } else {
-                                    // Check if all OTP fields are filled
-                                    const otp = Array.from(passwords).map(input => input.value).join('');
-                                    if (otp.length === passwords.length) {
-                                        // Show SweetAlert popup
-                                        Swal.fire({
-                                            icon: 'success',
-                                            title: 'Success!',
-                                            text: 'Transaction was successful.',
-                                            confirmButtonText: 'OK'
-                                        });
-                                    }
-                                }
-                            } else if (e.key === 'Backspace') {
-                                // Move to the previous input if backspace is pressed
-                                if (prevInput) {
-                                    prevInput.focus();
-                                }
-                            }
-                        });
-                    });
-                </script>
-                <!-- Scroll Top -->
-                <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-                <script src="assets/js/main.js"></script>
+                if (e.key >= '0' && e.key <= '9') {
+                    // Move to the next input if a number is entered
+                    if (nextInput) {
+                        nextInput.focus();
+                    } else {
+                        // Check if all OTP fields are filled
+                        const otp = Array.from(passwords).map(input => input.value).join('');
+                        if (otp.length === passwords.length) {
+                            // Show SweetAlert popup
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Success!',
+                                text: 'Transaction was successful.',
+                                confirmButtonText: 'OK'
+                            });
+                        }
+                    }
+                } else if (e.key === 'Backspace') {
+                    // Move to the previous input if backspace is pressed
+                    if (prevInput) {
+                        prevInput.focus();
+                    }
+                }
+            });
+        });
 
-                <script src="https://code.jquery.com/jquery-3.7.1.min.js " integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin=" anonymous "></script>
-                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-                <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Get the modal element
+            const transactionModal = document.getElementById("transactionModal");
+
+            // Add an event listener for when the modal is shown
+            transactionModal.addEventListener("shown.bs.modal", () => {
+                // Start the skeleton loader timer when the modal is triggered
+                setTimeout(() => {
+                    const dataContainer = document.getElementById("data-container");
+
+                    // Clear the skeleton loader
+                    dataContainer.innerHTML = '';
+                    const colDiv = document.createElement('div');
+                    colDiv.className = 'modal-content';
+
+                    colDiv.innerHTML = `
+                <div class="modal-body">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="transactionModalLabel">History log</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div class="a">
+                            <p>Service type</p>
+                        </div>
+                        <div class="b d-flex justify-content-between align-items-center">
+                            <h6 class="mt-2">PHED</h6>
+                            <img src="assets/img/slt.png" alt="sltv">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="a">
+                            <p>Amount</p>
+                        </div>
+                        <div class="b">
+                            <h6 class="mt-2">₦3,500.00</h6>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="a">
+                            <p>Recipient</p>
+                        </div>
+                        <div class="b">
+                            <h6 class="mt-2">09068225050</h6>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="a">
+                            <p>Reference</p>
+                        </div>
+                        <div class="b">
+                            <h6 class="mt-2">28323_bsdus2_342</h6>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="a">
+                            <p>Date</p>
+                        </div>
+                        <div class="b">
+                            <h6 class="mt-2">12 May 2025 : 10:34PM</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="refresh">
+                    <a href="" class="d-flex justify-content-end align-items-center" >
+                        <p><i class="bi bi-arrow-clockwise"></i>Refresh</p>
+                    </a>
+                </div>
+                <div class="modal-footer mt-5">
+                    <button type="button" class="proceed mt-5" data-bs-dismiss="modal">Dismiss</button>
+                </div>
+            `;
+
+                    // Append the created div to the container
+                    dataContainer.appendChild(colDiv);
+                }, 2000); // 2-second delay
+            });
+        });
+    </script>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <script src="assets/js/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js " integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin=" anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
 

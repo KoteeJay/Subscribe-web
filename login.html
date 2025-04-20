@@ -45,7 +45,7 @@
             </nav>
         </div>
     </header>
-    <main class="mt-5">
+    <main class="mt-5 login">
         <section>
             <div class="container mt-3">
                 <div class="auth m-auto d-flex">
@@ -64,7 +64,7 @@
                                 <input type="text" placeholder="Phone">
                             </div>
                             <div class="d-flex justify-content-end mt-3">
-                                <a href="">Forgot Password?</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">Forgot Password?</a>
                             </div>
                             <button class="mt-3">Login</button>
                         </form>
@@ -89,18 +89,126 @@
                     </div>
                     <div class="right d-none d-lg-block justify-content-center align-items-center">
                         <div class="margin"></div>
-                        <div class="button right d-none d-lg-block">
-                            <a href="" class="btna m-auto">Signup</a>
+                        <div class="button d-none d-lg-block">
+                            <a href="register.html" class="btna m-auto">Signup</a>
                         </div>
                         <div class="button">
-                            <a href="" class="btnb m-auto">Login</a>
+                            <a href="#" class="btnb m-auto">Login</a>
                         </div>
                     </div>
                 </div>
             </div>
             </div>
         </section>
+
+        <!-- Confirm Modal -->
+        <div class="modal fade forgot-password" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="assets/img/b-logo.png" alt="">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+
+                        <form>
+                            <div class="input">
+                                <label for="">Verify Email</label>
+                                <input type="text" placeholder="Enter email address" class="mt-5">
+                            </div>
+                            <div class="">
+
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer mt-5">
+                        <button type="button" class="proceed mt-5" data-bs-toggle="modal" data-bs-target="#confirmModal">Verify email</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Confirm Modal -->
+        <div class="modal fade forgot-password" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="assets/img/b-logo.png" alt="">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+
+                        <h4 class="mt-3">Confirm Token</h4>
+
+                        <div class="d-flex justify-content-between align-items-center pin mt-5">
+                            <input maxlength="1" class="password text-center" id="otp1" type="text">
+                            <input maxlength="1" class="password text-center" id="otp2" type="text">
+                            <input maxlength="1" class="password text-center" id="otp3" type="text">
+                            <input maxlength="1" class="password text-center" id="otp4" type="text">
+                        </div>
+                    </div>
+                    <div class="modal-footer mt-5">
+                        <button class="proceed spinner-button" style="display: none;">
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            </button>
+                        <button class="proceed confirm-button">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+    <script>
+        // Get all OTP input fields
+        const otpInputs = document.querySelectorAll('.password');
+        const confirmBtn = document.querySelector('.confirm-button');
+        const spinnerBtn = document.querySelector('.spinner-button');
+
+        otpInputs.forEach((input, index) => {
+            input.addEventListener('keyup', (e) => {
+                const key = e.key;
+                const nextInput = otpInputs[index + 1];
+                const prevInput = otpInputs[index - 1];
+
+                if (key >= '0' && key <= '9') {
+                    // Move to next input on number entry
+                    if (nextInput) {
+                        nextInput.focus();
+                    } else {
+                        const otp = Array.from(otpInputs).map(i => i.value).join('');
+                        if (otp.length === otpInputs.length) {
+                            if (confirmBtn && spinnerBtn) {
+                                confirmBtn.addEventListener('click', () => {
+                                    confirmBtn.style.display = 'none';
+                                    spinnerBtn.style.display = 'inline-block';
+
+                                    setTimeout(() => {
+                                        spinnerBtn.style.display = 'none';
+
+                                        Swal.fire({
+                                            icon: 'success',
+                                            title: 'Success!',
+                                            text: 'Your token has been confirmed.',
+                                            confirmButtonText: 'OK'
+                                        });
+                                    }, 2000);
+                                });
+                            }
+
+                        }
+                    }
+
+                } else if (key === 'Backspace' && prevInput) {
+                    // Move to previous input on backspace
+                    prevInput.focus();
+                }
+            });
+
+            input.addEventListener('input', () => {
+                input.style.backgroundColor = input.value ? '#7E1891' : '#f5f5f5';
+                input.style.color = input.value ? '#fff' : '#000';
+            });
+        });
+    </script>
 
 
     <!-- Scroll Top -->

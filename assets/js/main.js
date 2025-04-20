@@ -1,144 +1,165 @@
-  /**
-   * Mobile nav toggle
-   */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+document.addEventListener('DOMContentLoaded', () => {
+    /** Mobile Nav Toggle */
+    const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+    const toggleMobileNav = () => {
+        document.body.classList.toggle('mobile-nav-active');
+        mobileNavToggleBtn.classList.toggle('bi-list');
+        mobileNavToggleBtn.classList.toggle('bi-x');
+    };
+    if (mobileNavToggleBtn) {
+        mobileNavToggleBtn.addEventListener('click', toggleMobileNav);
+    }
 
-  function mobileNavToogle() {
-      document.querySelector('body').classList.toggle('mobile-nav-active');
-      mobileNavToggleBtn.classList.toggle('bi-list');
-      mobileNavToggleBtn.classList.toggle('bi-x');
-  }
-  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+    /** Hide Mobile Nav on Same-page/Hash Links */
+    document.querySelectorAll('#navmenu a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (document.body.classList.contains('mobile-nav-active')) {
+                toggleMobileNav();
+            }
+        });
+    });
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-      navmenu.addEventListener('click', () => {
-          if (document.querySelector('.mobile-nav-active')) {
-              mobileNavToogle();
-          }
-      });
+    /** Toggle Mobile Nav Dropdowns */
+    document.querySelectorAll('.navmenu .toggle-dropdown').forEach(dropdown => {
+        dropdown.addEventListener('click', e => {
+            e.preventDefault();
+            dropdown.parentNode.classList.toggle('active');
+            dropdown.parentNode.nextElementSibling.classList.toggle('dropdown-active');
+            e.stopImmediatePropagation();
+        });
+    });
 
-  });
+    /** Scroll-to-Top Button */
+    const scrollTopBtn = document.querySelector('.scroll-top');
+    const toggleScrollTop = () => {
+        if (scrollTopBtn) {
+            scrollTopBtn.classList.toggle('active', window.scrollY > 900);
+        }
+    };
+    if (scrollTopBtn) {
+        scrollTopBtn.addEventListener('click', e => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+    window.addEventListener('load', toggleScrollTop);
+    document.addEventListener('scroll', toggleScrollTop);
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-      navmenu.addEventListener('click', function(e) {
-          e.preventDefault();
-          this.parentNode.classList.toggle('active');
-          this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-          e.stopImmediatePropagation();
-      });
-  });
+    /** AOS Animation Init */
+    const initAOS = () => {
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    };
+    window.addEventListener('load', initAOS);
 
-  /**
-   * Scroll top button
-   */
-  let scrollTop = document.querySelector('.scroll-top');
+    /** Swiper Init */
+    const initSwiper = () => {
+        document.querySelectorAll('.init-swiper').forEach(swiperEl => {
+            const config = JSON.parse(swiperEl.querySelector('.swiper-config').textContent.trim());
+            if (swiperEl.classList.contains('swiper-tab')) {
+                initSwiperWithCustomPagination(swiperEl, config);
+            } else {
+                new Swiper(swiperEl, config);
+            }
+        });
+    };
+    window.addEventListener('load', initSwiper);
 
-  function toggleScrollTop() {
-      if (scrollTop) {
-          window.scrollY > 900 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-      }
-  }
-  scrollTop.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-      });
-  });
+    /** Bootstrap Modal Focus */
+    const modal = document.getElementById('myModal');
+    const input = document.getElementById('myInput');
+    if (modal && input) {
+        modal.addEventListener('shown.bs.modal', () => input.focus());
+    }
 
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
+    /** Set and Format Amount */
+    window.setAmount = (amount) => {
+        const amountInput = document.getElementById('amountInput');
+        if (amountInput) amountInput.value = `₦${amount}.00`;
+    };
 
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
-      AOS.init({
-          duration: 1000,
-          easing: 'ease-in-out',
-          once: true,
-          mirror: false
-      });
-  }
-  window.addEventListener('load', aosInit);
+    window.formatAmount = (input) => {
+        const value = input.value.replace(/[^0-9]/g, '');
+        input.value = value ? `₦${parseInt(value, 10).toLocaleString()}.00` : '';
+    };
 
+    /** Show SweetAlert Success */
+    window.showSuccessAlert = () => {
+        Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: 'Your transaction was successful.',
+            confirmButtonText: 'OK'
+        });
+    };
 
-  /**
-   * Init swiper sliders
-   */
-  function initSwiper() {
-      document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-          let config = JSON.parse(
-              swiperElement.querySelector(".swiper-config").innerHTML.trim()
-          );
+    /** Show Notification Popup */
+    const showNotification = (message) => {
+        const popup = document.getElementById('notification-popup');
+        const messageEl = document.getElementById('notification-message');
+        if (!popup || !messageEl) return;
 
-          if (swiperElement.classList.contains("swiper-tab")) {
-              initSwiperWithCustomPagination(swiperElement, config);
-          } else {
-              new Swiper(swiperElement, config);
-          }
-      });
-  }
+        messageEl.textContent = message;
+        popup.classList.remove('hidden');
+        popup.classList.add('show');
 
-  window.addEventListener("load", initSwiper);
+        setTimeout(() => {
+            popup.classList.remove('show');
+            popup.classList.add('hidden');
+        }, 3000);
+    };
 
-  /**
-   * Dropdown 
-   */
-  function selectOption(imgSrc, className) {
-      // Update the image in the dropdown button
-      document.getElementById('selectedImage').src = imgSrc;
+    /** OTP Input Navigation */
+    const otpInputs = document.querySelectorAll('.password');
+    otpInputs.forEach((input, index) => {
+        input.addEventListener('keyup', (e) => {
+            const next = otpInputs[index + 1];
+            const prev = otpInputs[index - 1];
 
-  }
-  /**
-   * Modal 
-   */
-  const myModal = document.getElementById('myModal')
-  const myInput = document.getElementById('myInput')
+            if (e.key >= '0' && e.key <= '9') {
+                if (next) {
+                    next.focus();
+                } else {
+                    const otp = Array.from(otpInputs).map(i => i.value).join('');
+                    if (otp.length === otpInputs.length) {
+                        showSuccessAlert();
+                    }
+                }
+            } else if (e.key === 'Backspace' && prev) {
+                prev.focus();
+            }
+        });
+    });
 
-  myModal.addEventListener('shown.bs.modal', () => {
-      myInput.focus()
-  });
+    /** Copy Account Number to Clipboard */
+    const copyBtn = document.getElementById('copy');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+            const accountInput = document.querySelector('.account-number input');
+            if (!accountInput) return;
 
+            navigator.clipboard.writeText(accountInput.value)
+                .then(() => showNotification('Account number copied to clipboard!'))
+                .catch(err => {
+                    showNotification('Failed to copy account number.');
+                    console.error('Copy error:', err);
+                });
+        });
+    }
 
-  // Function to set the amount in the input field
-  function setAmount(amount) {
-      const amountInput = document.getElementById('amountInput');
-      amountInput.value = `₦${amount}.00`;
-  }
+    /** Utility Dropdown Image Update */
+    window.selectOption = (imgSrc) => {
+        const selectedImage = document.getElementById('selectedImage');
+        if (selectedImage) {
+            selectedImage.src = imgSrc;
 
-  function formatAmount(input) {
-      // Remove any non-numeric characters
-      let value = input.value.replace(/[^0-9]/g, '');
-
-      // Check if the value is not empty
-      if (value) {
-          // Format the value with the Naira sign and .00
-          input.value = `₦${parseInt(value, 10).toLocaleString()}`;
-      } else {
-          // If the input is empty, clear the field
-          input.value = '';
-      }
-      amountInput.addEventListener('keydown', (e) => {
-          // Allow control keys
-          if (e.key === 'Backspace' || e.key === 'Delete') {
-              // Let the input event handle the reformat after deletion
-              return;
-          }
-      });
-  }
-
-  function showSuccessAlert() {
-      Swal.fire({
-          icon: 'success',
-          title: 'Success!',
-          text: 'Your transaction was successful.',
-          confirmButtonText: 'OK'
-      });
-  }
+            // Optionally close the modal after selection
+            const modal = bootstrap.Modal.getInstance(document.getElementById('meterModal'));
+            if (modal) modal.hide();
+        }
+    };
+});
